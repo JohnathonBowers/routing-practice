@@ -3,18 +3,18 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 import Home from "./components/Home";
 import NumberWord from "./components/NumberWord";
-import StyledInput from "./components/StyledInput";
+import StyledNumberWord from "./components/StyledNumberWord";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/:numberWord" element={<NumberWord />}/>
+        <Route path="/:numberWord" element={<NumberWord />} />
+        <Route path="/:numberWord/:textColor/:backgroundColor" element={<StyledNumberWord/>} />
       </Routes>
     </BrowserRouter>
   );
